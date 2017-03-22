@@ -1,0 +1,154 @@
+/*  ---------------------------------------------------------------------------
+
+    Author: Vandré Leal Cândido
+    Description: Personal Portfolio
+    Year: 2015
+
+---------------------------------------------------------------------------  */
+
+
+/* IMPORTING MONTSERRAT */
+
+@charset "UTF-8";
+
+@font-face {
+  	font-family: 'Montserrat Light';
+  	src: url('../fonts/Montserrat-Light.otf') format('opentype');
+}
+
+@font-face {
+  	font-family: 'Montserrat Regular';
+  	src: url('../fonts/Montserrat-Regular.otf') format('opentype');
+}
+
+@font-face {
+  	font-family: 'Montserrat Black';
+  	src: url('../fonts/Montserrat-Black.otf') format('opentype');
+}
+
+
+/* GENERAL STYLES */
+
+* {
+	margin: 0;
+	padding: 0;
+	outline: none;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+	-webkit-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 1.25),
+only screen and ( min-device-pixel-ratio: 1.25),
+only screen and ( min-resolution: 200dpi),
+only screen and ( min-resolution: 1.25dppx)
+{
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Montserrat Light', 'Times New Roman', sans-serif;
+    letter-spacing: 0.015em;
+    word-spacing: -0.15em;
+    background: #000;
+}
+
+@media only screen and (min-width: 1601px) {
+	body {
+		font-size: 1.75em;
+	}
+}
+
+@media only screen and (min-width: 1981px) {
+	body {
+		font-size: 2em;
+	}
+}
+
+p {
+	letter-spacing: 0.025em;
+	word-spacing: 0.05em;
+}
+
+@media only screen and (max-width: 767px) {
+    p {
+    	font-size: 0.95em;
+    	line-height: 1.85em;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    p {
+    	font-size: 1.05em;
+    	line-height: 1.9em;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+	display: block;
+	margin: 0;
+	line-height: 1.5em;
+}
+
+a, a:focus {
+	color: #999;
+	text-decoration: none;
+	transition: all .2s linear;
+}
+
+a:hover {
+	color: #555;
+	text-decoration: none;
+}
+
+i { margin-right: 10px; }
+
+.padding-none { padding: 0; }
+
+::selection         { background:rgba(0,0,0,.1); }
+::-moz-selection    { background:rgba(0,0,0,.1); }
+img::-moz-selection { background:transparent; }
+img::selection      { background:transparent; }
+img::-moz-selection { background:transparent; }
+
+.btn-custom {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 12px 25px;
+    font-family: 'Montserrat Regular';
+    font-size: 1.15em;
+    color: #999;
+    text-transform: uppercase;
+    border: 3px solid #aaa;
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 1601px) {
+	.btn-custom {
+		padding: 15px 30px;
+		border: 4px solid #aaa;
+	}
+}
+
+.btn-custom:hover,
+.btn-custom:focus,
+.btn-custom.focus,
+.btn-custom:active,
+.btn-custom.active{
+    background-color: #777;
+    border-color: #777;
+    color: #fff;
+}

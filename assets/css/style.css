@@ -1,0 +1,463 @@
+/*  ---------------------------------------------------------------------------
+
+    Author: Vandré Leal Cândido
+    Description: Personal Portfolio
+    Year: 2015
+
+---------------------------------------------------------------------------  */
+
+
+/* PAGE POSITIONING */
+
+.page-positioning {
+    position: absolute;
+    top: 100%;
+    z-index: 2;
+    width: 100%;
+    height: auto;
+    background: #f6f6f6;
+}
+
+
+/* INTRO */
+
+.intro {
+    position: fixed;
+    z-index: 1;
+    display: table;
+    width: 100%;
+    height: 100%;
+    padding: 50px 0;
+    text-align: center;
+    word-spacing: 0.25em;
+    background: linear-gradient(
+        rgba(0,0,0,.8),
+        rgba(0,0,0,.7)
+        ), url('../img/bg-cover.jpg');
+    background-size: contain;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+}
+
+.intro .middle {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.intro h1 {
+    margin-bottom: 10px;
+    font-family: 'Montserrat Black';
+    font-size: 3.5em;
+    color: #fff;
+    text-transform: uppercase;
+    text-shadow: 1px 2px #000;
+}
+
+.intro h2 {
+    margin-bottom: 100px;
+    font-size: 1.5em;
+    color: #b6a057;
+    font-style: italic;
+    text-shadow: 1px 2px #000;
+}
+
+.intro .language {
+    position: absolute;
+    top: 2.5%;
+    right: 0%;
+    padding: 5px 15px 7px 12px;
+    font-family: 'Montserrat Regular';
+    font-size: 0.85em;
+    color: #d8d8d8;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: rgba(238,238,238,.15);
+    border-left: 2px solid #d8d8d8;
+    border-radius: 0;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    transition: all 0.35s ease;
+}
+
+.intro .language:hover{
+    border-left: 2px solid #ddd;
+    padding-right: 20px;
+    padding-left: 20px;
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+.intro .mouse {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    display: block;
+    margin: 0 auto;
+    width: 26px;
+    height: 46px;
+    border-radius: 13px;
+    border: 2px solid #fff;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.intro .mouse span {
+    display: block;
+    margin: 6px auto;
+    width: 3px;
+    height: 3px;
+    border-radius: 4px;
+    background: #fff;
+    border: 1px solid transparent;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-name: scroll;
+    animation-name: scroll;
+}
+
+@-webkit-keyframes scroll {
+    0% {
+        opacity: 1;
+        filter: alpha(opacity=100);
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 0;
+        filter: alpha(opacity=0);
+        -webkit-transform: translateY(20px);
+        transform: translateY(20px);
+    }
+}
+
+@keyframes scroll {
+    0% {
+        opacity: 1;
+        filter: alpha(opacity=100);
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 0;
+        filter: alpha(opacity=0);
+        -webkit-transform: translateY(20px);
+        transform: translateY(20px);
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .intro h2 { font-size: 1.15em; }
+}
+
+@media only screen and (max-width: 479px) {
+    .intro h1 { font-size: 2.5em; }
+    .intro h2 { font-size: 1em; }
+}
+
+
+/* CONTENT */
+
+.content {
+    position: relative;
+    min-width: 100%;
+    height: auto;
+    padding: 100px 15px;
+    letter-spacing: 0.025em;
+    word-spacing: 0.15em;
+}
+
+.content h1 {
+    margin-bottom: 30px;
+    font-family: 'Montserrat Black';
+    font-size: 3.5em;
+    color: #555;
+    text-transform: uppercase;
+}
+
+.content h2 {
+    margin-bottom: 30px;
+    font-size: 1.25em;
+    color: #7c7c7c;
+    font-style: italic;
+}
+
+.content h3 {
+    margin-bottom: 40px;
+    font-family: 'Montserrat Black';
+    font-size: 2.25em;
+    color: #555;
+    text-transform: uppercase;
+}
+
+.content h4 {
+    padding-bottom: 3px;
+    font-family: 'Montserrat Black';
+    font-size: 1.3em;
+    color: #777;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.content h5 {
+    padding-bottom: 2px;
+    font-size: 1em;
+    color: #888;
+}
+
+.content h6 {
+    font-size: 0.9em;
+    color: #999;
+    font-style: italic;
+}
+
+.content p { color: #888; }
+
+.content .divider {
+    display: block;
+    width: 75px;
+    height: 3px;
+    margin-bottom: 40px;
+    background: #dedaa9;
+}
+
+.content .item { margin-bottom: 30px; }
+
+.content .padding-left { padding-left: 10px; }
+
+@media only screen and (max-width: 767px) {
+    .content {
+        padding: 75px 15px;
+    }
+    .content h1 {
+        font-size: 2.5em;
+    }
+    .content h2 {
+        font-size: 1.05em;
+    }
+}
+
+@media only screen and (max-width: 1199px) {
+    .content h2 {
+        font-size: 1.2em;
+    }
+    .content h3 {
+        font-size: 1.75em;
+    }
+    .content .padding-left {
+        padding-left: 75px;
+    }
+}
+
+@media only screen and (min-width: 1600px) {
+    .content {
+        padding: 125px 25px;
+    }
+}
+
+
+/* PORTFOLIO */
+
+.portfolio {
+    position: relative;
+    min-width: 100%;
+    height: auto;
+}
+
+.portfolio-item {
+    height: 350px;
+    overflow: hidden;
+    border: 1px solid transparent;
+    box-shadow: inset 0 -25px 50px #000000;
+}
+
+.item figure {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    cursor: pointer;
+}
+
+.item figure img {
+    position: relative;
+    display: block;
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+    min-height: 100%;
+    background-size: cover;
+    image-rendering:-webkit-optimize-contrast;
+}
+
+.item figure figcaption {
+    padding: 2em;
+    font-size: 1.25em;
+    color: #fff;
+    text-transform: uppercase;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.item figure figcaption:before,
+.item figure figcaption:after {
+    pointer-events: none;
+}
+
+.item figure figcaption,
+.item figure figcaption > a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.item figure figcaption > a {
+    z-index: 1000;
+    text-indent: 200%;
+    white-space: nowrap;
+    font-size: 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+.item figure h2 {
+    word-spacing: -0.15em;
+}
+
+.item figure h2,
+.item figure p {
+    margin: 0;
+}
+
+.item figure p {
+    letter-spacing: 1px;
+    font-size: 68.5%;
+}
+
+figure.effect-item { background: #000; }
+
+figure.effect-item img {
+    opacity: 0.35;
+    filter: alpha(opacity=35);
+    transition: all 1.5s;
+    -webkit-filter: grayscale(1);
+    -moz-filter: grayscale(1);
+    -ms-filter: grayscale(1);
+    filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feColorMatrix type="matrix" color-interpolation-filters="sRGB" values="0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0 0 0 1 0" /></filter></svg>#filter');
+    -webkit-filter: grayscale(1);
+            filter: grayscale(1);
+    -webkit-filter: gray;
+            filter: gray;
+}
+
+figure.effect-item:hover img {
+    opacity: 0.15;
+    filter: alpha(opacity=15);
+    -webkit-transform: scale(1.025);
+    transform: scale(1.025);
+}
+
+figure.effect-item h2 {
+    padding-top: 100px;
+    font-family: 'Montserrat Regular';
+    font-size: 1.3em;
+    line-height: 1.45em;
+    letter-spacing: 0.05em;
+    word-spacing: 0.15em;
+    -webkit-transform: translate3d(0,-10px,0);
+    transform: translate3d(0,-10px,0);
+    transition: -webkit-transform 0.5s;
+    transition: transform 0.5s;
+}
+
+figure.effect-item p {
+    padding: 15px 2.5em;
+    font-size: 0.8em;
+    color: #b6a057;
+    word-spacing: 0.1em;
+    filter: alpha(opacity=0);
+    transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+}
+
+figure.effect-item:hover h2,
+figure.effect-item:hover p {
+    filter: alpha(opacity=100);
+    -webkit-transform: translate3d(0,10px,0);
+    transform: translate3d(0,10px,0);
+}
+
+@media only screen and (max-width: 767px) {
+    .portfolio-item {
+        height: 250px;
+    }
+    figure.effect-item h2 {
+        padding-top: 45px;
+        font-size: 1em;
+    }
+    figure.effect-item p {
+        font-size: 0.7em;
+    }
+}
+
+@media only screen and (min-width: 1600px) {
+    .portfolio-item {
+        height: 425px;
+    }
+}
+
+
+/* CONTACT */
+
+#contact {
+    min-width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+#contact h2 {
+    margin-bottom: 60px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+
+/* SOCIAL */
+
+#social {
+    min-width: 100%;
+    height: auto;
+    padding: 25px;
+    text-align: center;
+    background: #111;
+}
+
+#social ul {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    font-family: 'Montserrat Black';
+    text-transform: uppercase;
+}
+
+#social li {
+    display: inline-block;
+    width: 25%;
+}
+
+#social li a:hover {
+    color: #dedaa9;
+}

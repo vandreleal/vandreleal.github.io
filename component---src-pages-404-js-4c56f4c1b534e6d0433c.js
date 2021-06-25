@@ -1,0 +1,2 @@
+(self.webpackChunkportfolio=self.webpackChunkportfolio||[]).push([[883],{9616:function(n,t,u){"use strict";u.r(t);var e=u(7294),f=u(5444);t.default=function(){return(0,e.useEffect)((function(){(0,f.navigate)("/")}),[]),null}}}]);
+//# sourceMappingURL=component---src-pages-404-js-4c56f4c1b534e6d0433c.js.map

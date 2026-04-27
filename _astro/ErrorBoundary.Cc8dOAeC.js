@@ -1,1 +1,0 @@
-import{a as o}from"./index.CLBPsBg6.js";class s extends o.Component{state={hasError:!1};static getDerivedStateFromError(){return{hasError:!0}}componentDidCatch(r,t){console.error("[ErrorBoundary]",r,t.componentStack)}render(){return this.state.hasError?this.props.fallback??null:this.props.children}}export{s as E};

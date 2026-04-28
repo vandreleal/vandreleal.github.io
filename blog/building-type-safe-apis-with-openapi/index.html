@@ -33,7 +33,7 @@ Skip to main content
 <h2 id="the-approach">The Approach</h2>
 <p>I built a codegen pipeline that runs on every API spec change. It generates TypeScript types, API client functions, and request/response validators. The frontend never defines its own API types because they come from the spec.</p>
 <p>The pipeline hooks into CI. When the OpenAPI spec changes, the CI workflow regenerates the types and opens a PR. The frontend team reviews the diff, which shows exactly what changed in the API contract. No more guessing.</p>
-<p>I used a combination of <code>openapi-typescript</code> for type generation and custom templates for the client functions. The generated client is thin, wrapping <code>fetch</code> with proper typing, error handling, and request validation.</p>
+<p>The first iteration used <code>openapi-typescript</code> for the types, with custom templates for the client functions and the validators alongside it. The generated client was thin, wrapping <code>fetch</code> with proper typing, error handling, and request validation. As the validators we needed grew more elaborate, I later replaced parts of the pipeline with a tool that handles types and Zod schemas in a single pass. That migration is its own story.</p>
 <h2 id="what-changed">What Changed</h2>
 <p>The impact was immediate. Integration errors dropped to near zero. Code reviews became simpler because reviewers could focus on logic rather than checking whether types matched the API.</p>
 <p>The biggest win was confidence. Engineers could refactor API consumption code knowing the compiler would catch any contract violations. What used to require manual verification now happened automatically at build time.</p>

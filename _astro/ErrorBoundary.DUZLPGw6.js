@@ -1,1 +1,0 @@
-import{C as e}from"./preact.module.DaYdYXBZ.js";class a extends e{state={hasError:!1};static getDerivedStateFromError(){return{hasError:!0}}componentDidCatch(r,t){console.error("[ErrorBoundary]",r,t.componentStack)}render(){return this.state.hasError?this.props.fallback??null:this.props.children}}export{a as E};

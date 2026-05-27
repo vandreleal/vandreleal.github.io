@@ -1,1 +1,357 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>Vandré Leal Cândido · Writing</title><description>Thoughts on architecture, tooling, and craft.</description><link>https://vandre.dev/</link><language>en-us</language><item><title>Rebuilding my personal site</title><link>https://vandre.dev/blog/rebuilding-my-portfolio/</link><guid isPermaLink="true">https://vandre.dev/blog/rebuilding-my-portfolio/</guid><description>A short tour of the latest rebuild: a static-first site with no client framework, reduced motion as a real signal, and most of the work shifted to build time.</description><pubDate>Sat, 23 May 2026 00:00:00 GMT</pubDate></item><item><title>Audit Scripts for a Design System</title><link>https://vandre.dev/blog/audit-scripts-for-a-design-system/</link><guid isPermaLink="true">https://vandre.dev/blog/audit-scripts-for-a-design-system/</guid><description>How a style guide became a suite of audit scripts behind one umbrella command, grouped by what they protect, with parallel execution and an explicit drift-resolution workflow.</description><pubDate>Wed, 13 May 2026 00:00:00 GMT</pubDate></item><item><title>Test Layers for a Design System</title><link>https://vandre.dev/blog/test-layers-for-a-design-system/</link><guid isPermaLink="true">https://vandre.dev/blog/test-layers-for-a-design-system/</guid><description>Type tests, an API surface snapshot, story-level token-cascade guards, and property tests. Layered testing that catches the failure modes a design system actually has.</description><pubDate>Tue, 12 May 2026 00:00:00 GMT</pubDate></item><item><title>Caching Sharp-Processed Images in Static Builds</title><link>https://vandre.dev/blog/caching-sharp-image-processing/</link><guid isPermaLink="true">https://vandre.dev/blog/caching-sharp-image-processing/</guid><description>How I cut documentation build times by hashing image inputs, committing the preprocessed webp outputs, and skipping image work on every CI run.</description><pubDate>Sun, 01 Feb 2026 00:00:00 GMT</pubDate></item><item><title>Replacing Astro Image for a Documentation Site</title><link>https://vandre.dev/blog/replacing-astro-image-with-a-custom-wrapper/</link><guid isPermaLink="true">https://vandre.dev/blog/replacing-astro-image-with-a-custom-wrapper/</guid><description>Why I removed Astro&apos;s built-in Image component from a docs site and replaced it with a thin custom wrapper, and the lesson about when generic abstractions cost more than they save.</description><pubDate>Mon, 22 Dec 2025 00:00:00 GMT</pubDate></item><item><title>Custom markdownlint Rules for Docs Conventions</title><link>https://vandre.dev/blog/custom-markdownlint-rules-for-docs/</link><guid isPermaLink="true">https://vandre.dev/blog/custom-markdownlint-rules-for-docs/</guid><description>How I encoded the docs site&apos;s actual conventions into project-specific markdownlint rules so contributors stopped having to remember them.</description><pubDate>Mon, 15 Dec 2025 00:00:00 GMT</pubDate></item><item><title>Building an OpenAPI Code Generation Pipeline with Kubb</title><link>https://vandre.dev/blog/openapi-codegen-pipeline-with-kubb/</link><guid isPermaLink="true">https://vandre.dev/blog/openapi-codegen-pipeline-with-kubb/</guid><description>How I automated TypeScript type and Zod schema generation from OpenAPI specs using Kubb, with scheduled CI runs and team notifications for breaking changes.</description><pubDate>Wed, 12 Nov 2025 00:00:00 GMT</pubDate></item><item><title>Building Type-Safe APIs with OpenAPI</title><link>https://vandre.dev/blog/building-type-safe-apis-with-openapi/</link><guid isPermaLink="true">https://vandre.dev/blog/building-type-safe-apis-with-openapi/</guid><description>How the dashboard API integration layer became its own product: OpenAPI as the single source of truth across multiple consuming teams.</description><pubDate>Wed, 15 Oct 2025 00:00:00 GMT</pubDate></item><item><title>A Practical Prefetching Strategy with TanStack Query and Router</title><link>https://vandre.dev/blog/tanstack-query-prefetching-strategy/</link><guid isPermaLink="true">https://vandre.dev/blog/tanstack-query-prefetching-strategy/</guid><description>How I implemented intent-based preloading, route-level prefetching, and pagination prefetching to make a dashboard feel instant.</description><pubDate>Fri, 29 Aug 2025 00:00:00 GMT</pubDate></item><item><title>Encoding Pricing Rules Without Forking the UI</title><link>https://vandre.dev/blog/encoding-pricing-rules-as-data/</link><guid isPermaLink="true">https://vandre.dev/blog/encoding-pricing-rules-as-data/</guid><description>How I moved pricing math out of components and into the plan definition so a marketing site could absorb new products and billing models without UI changes.</description><pubDate>Tue, 15 Jul 2025 00:00:00 GMT</pubDate></item><item><title>Mocking the API Contract Before Implementing It</title><link>https://vandre.dev/blog/mocking-api-contracts-before-implementing/</link><guid isPermaLink="true">https://vandre.dev/blog/mocking-api-contracts-before-implementing/</guid><description>How shipping the API contract before the implementation removed the synchronization tax between backend and frontend teams.</description><pubDate>Sun, 01 Jun 2025 00:00:00 GMT</pubDate></item><item><title>Proxy Patterns for Multi-API Dashboards</title><link>https://vandre.dev/blog/proxy-patterns-for-multi-api-dashboards/</link><guid isPermaLink="true">https://vandre.dev/blog/proxy-patterns-for-multi-api-dashboards/</guid><description>How I designed a proxy layer to unify multiple APIs behind a single authentication and routing system in a React dashboard.</description><pubDate>Tue, 15 Apr 2025 00:00:00 GMT</pubDate></item><item><title>Hybrid Next.js: Static Export and SSR from One Codebase</title><link>https://vandre.dev/blog/hybrid-nextjs-static-export-and-ssr/</link><guid isPermaLink="true">https://vandre.dev/blog/hybrid-nextjs-static-export-and-ssr/</guid><description>How I shipped a Next.js marketing site that builds as a static export for one host and as a server-rendered app on Vercel, without forking the codebase.</description><pubDate>Fri, 15 Nov 2024 00:00:00 GMT</pubDate></item><item><title>Building Interactive Pricing Pages with Next.js</title><link>https://vandre.dev/blog/building-interactive-pricing-pages/</link><guid isPermaLink="true">https://vandre.dev/blog/building-interactive-pricing-pages/</guid><description>How I built dynamic pricing pages with range sliders, plan comparisons, and real-time calculators for a SaaS product website.</description><pubDate>Sat, 15 Jun 2024 00:00:00 GMT</pubDate></item></channel></rss>
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Vandré Leal Cândido · Writing</title><description>Thoughts on architecture, tooling, and craft.</description><link>https://vandre.dev/</link><language>en-us</language><item><title>Rebuilding my personal site</title><link>https://vandre.dev/blog/rebuilding-my-portfolio/</link><guid isPermaLink="true">https://vandre.dev/blog/rebuilding-my-portfolio/</guid><description>A short tour of the latest rebuild: a static-first site with no client framework, reduced motion as a real signal, and most of the work shifted to build time.</description><pubDate>Sat, 23 May 2026 00:00:00 GMT</pubDate><content:encoded>I rewrote my personal site. The constraint was that every route had to score well on performance, accessibility, best practices, and SEO, and that the visual treatment could not soften to get there. The result is a small static site with a few interactive pieces, an animated backdrop that opts out under reduced motion, and a documented design system.
+
+## Static-first with no client framework
+
+The site is mostly text, with a few decorative pieces. A static-first framework is the right shape: every component renders to HTML by default, and the only interactive code that ships is what each page explicitly mounts. An earlier pass used a thin client framework as the wrapper around the heavy bits, a rotating globe and a WebGL backdrop. The wrapper was doing nothing. The actual work lived in non-framework libraries; the wrapper just mounted them. Stripping the framework removed about ten kilobytes gzipped of runtime that no UI was using.
+
+The interactive pieces now mount through plain `&lt;script&gt;` blocks. Each gates itself: the globe defers until the hero scrolls into view through an IntersectionObserver, the WebGL backdrop checks `prefers-reduced-motion` and dynamic-imports its implementation only when motion is allowed. The principle survived the framework swap: not &quot;load this as fast as possible&quot; but &quot;should this be loading for this user at all&quot;.
+
+## Reduced motion as a real signal
+
+The site has a heavy WebGL backdrop. For users with `prefers-reduced-motion`, the runtime never loads. The implementation chunk lives behind a dynamic import gated by `matchMedia`, and the cohort that opted out pays zero bytes for what they will never see. The same logic runs through the rest of the site: every animation has a reduced-motion branch, gated at the highest level the asset graph allows.
+
+## Build-time over runtime
+
+Open Graph images, structured metadata, the RSS feed, the sitemap, image variants, and the audit that gates each deploy all happen at build. No headless browser in the pipeline, no fonts to install at deploy time, no first-request cold start. There is also a `/system` page that lists every color, font, and motion curve in use, read from the same token source as the rest of the site, so the documentation does not drift from the implementation.
+
+## A page for the music
+
+There is a `/music` page that lists tracks I keep nearby: what is on rotation, the all-time list, favorite mix compilations, and a separate cut of Brazilian songs from home. The data is a flat file; the rendering is the same Section primitive that drives the rest of the site.
+
+## What I cut
+
+The client framework that was wrapping canvas mounts and earning nothing back. Hydration that would never be seen. Compatibility shims for tools I do not use. Animations that would run for users who asked them not to. Convenience layers that earn their weight on a different shape of project. The site is small in absolute terms, builds in three seconds, and audits in under a minute.</content:encoded><category>Architecture</category><category>Performance</category><category>Accessibility</category></item><item><title>Audit Scripts for a Design System</title><link>https://vandre.dev/blog/audit-scripts-for-a-design-system/</link><guid isPermaLink="true">https://vandre.dev/blog/audit-scripts-for-a-design-system/</guid><description>How a style guide became a suite of audit scripts behind one umbrella command, grouped by what they protect, with parallel execution and an explicit drift-resolution workflow.</description><pubDate>Wed, 13 May 2026 00:00:00 GMT</pubDate><content:encoded>A design system I work on accumulated a style guide that lived in a contributor doc: story naming, MDX page structure, import discipline, API surface stability, design-token discipline. Contributors had to remember the rules; reviewers had to enforce them by hand. I turned the rules into a suite of audit scripts behind one umbrella command. They block PRs that drift.
+
+## The umbrella
+
+A single command runs every audit in parallel. Each subprocess has measurable startup overhead, and running them sequentially compounds that quickly. The parallel runner fans them out, buffers stdout and stderr per check, and replays the output in canonical order so the log stays deterministic regardless of completion order.
+
+Each audit is also runnable on its own. The umbrella command takes a subcommand for a single check, plus flags for audits that need an intentional &quot;regenerate baseline&quot; path, like the API surface snapshot.
+
+## The categories
+
+Audits group by what they protect, not by what they run.
+
+**Story shape.** Every component ships its stories file and docs page in the expected shape. Compound components declare their sub-shapes in story meta so the docs panel renders one props table per sub-shape. No prop spreading on the components that count as stable surface.
+
+**Test coverage.** Every body-declared prop on an exported props type has at least one positive type test. Every stable component has a colocated property test. Interactive elements get keyboard exercise in their play function.
+
+**Public contract.** A generated snapshot of the public API surface diffs against the committed baseline. Every body-declared prop carries a JSDoc comment so the docs panel renders descriptions, not just types.
+
+**Codebase hygiene.** No relative imports inside the design-system root. No hardcoded colors or pixel literals inside component CSS. Every stable component ships a Figma Code Connect file so it surfaces in Figma&apos;s dev-mode panel.
+
+The categories matter more than the individual scripts. New audits get sorted into the same four buckets, and the umbrella stays a flat list rather than a taxonomy.
+
+## What I learned
+
+A general-purpose linter does not know about story exports, MDX structure, property-test colocation, or Figma mappings. Each script is short because the rule is short. The umbrella is the only thing that ties them together, and it stays short too because every script is the same shape: walk the design system, find violations, fail with the list. Adding another check is one file and one entry in the canonical step list.
+
+The leverage is not in the scripts. It is in what reviewers stopped doing. Story shape, import discipline, token usage: none of those need eyes anymore. Contributors get the feedback in CI in seconds instead of waiting on a review round. New contributors onboard against what the umbrella enforces, not what the contributor doc happens to mention. Code review stays for the parts that actually need judgment.</content:encoded><category>Design System</category><category>Tooling</category><category>CI</category></item><item><title>Test Layers for a Design System</title><link>https://vandre.dev/blog/test-layers-for-a-design-system/</link><guid isPermaLink="true">https://vandre.dev/blog/test-layers-for-a-design-system/</guid><description>Type tests, an API surface snapshot, story-level token-cascade guards, and property tests. Layered testing that catches the failure modes a design system actually has.</description><pubDate>Tue, 12 May 2026 00:00:00 GMT</pubDate><content:encoded>A design system has a different testing problem than an app. Components rarely have business logic. They have an API surface that other teams build against, a token cascade that has to hold no matter how a consumer composes them, and a combinatorial prop space that grows faster than any human can enumerate. I built a stack of test layers, each catching failures at one of those boundaries.
+
+## Type tests catch API drift
+
+Every stable component ships a colocated type-tests file covering positive cases (props that should compile) and negative cases (props that should fail with a specific error). Negative cases turned out to be the more useful ones: they lock in API guarantees. A consumer who passes a renamed value sees a type error and a clear migration path, not a silent runtime fallback.
+
+## An API surface snapshot tracks the public shape
+
+A generated file lists every exported component, every prop, and its type. CI regenerates it on each build and diffs against the committed snapshot. If the surface changed, the diff lands in the failure message, so the reviewer sees exactly which prop got added, removed, or retyped.
+
+The same snapshot doubles as the source for tier derivation: a component cannot be promoted without its surface being captured.
+
+## Story-level guards catch broken token cascades
+
+Stories run interaction tests through Storybook&apos;s play function. The interesting layer is a small helper that reads computed styles for a set of properties and asserts each one resolved to a real value, not the transparent fallback every design-token variable falls back to. When the cascade resolves, the property lands on a real color. When the chain breaks (a missing token, a typo, an element rendered outside a theme scope) the property lands on transparent and the test fails with the property name.
+
+The guard catches cascade failures but not hardcoded color leaks. That class of bug needs a separate lint rule against literal color values in component CSS.
+
+## Property tests cover the prop space
+
+Another layer renders every stable component across its full prop space: every union branch, every enum value, every boolean combination. If any combination throws, the framework minimizes the failing case and prints the seed.
+
+The point is not that every combination looks right. The point is that none of them throw. A component that breaks on a rare combination rarely surfaces in a hand-written story; property tests find it on the first run.
+
+## What this catches that unit tests don&apos;t
+
+Unit tests verify what a component does. These layers verify what it promises: a stable type contract, an enumerated public API, tokens that actually cascade, and a prop space that never throws.</content:encoded><category>Design System</category><category>Testing</category><category>TypeScript</category></item><item><title>Caching Sharp-Processed Images in Static Builds</title><link>https://vandre.dev/blog/caching-sharp-image-processing/</link><guid isPermaLink="true">https://vandre.dev/blog/caching-sharp-image-processing/</guid><description>How I cut documentation build times by hashing image inputs, committing the preprocessed webp outputs, and skipping image work on every CI run.</description><pubDate>Sun, 01 Feb 2026 00:00:00 GMT</pubDate><content:encoded>A documentation site I worked on processed thousands of images during every build. Sharp converted each one to webp, computed dimensions, and emitted multiple sizes. The work was the same across builds because the source images rarely changed, yet CI repeated it from scratch every time. Build times reflected that.
+
+## The Cache Boundary
+
+The first instinct was to add a runtime cache. That helped local development but did nothing for CI, where every run starts cold. I needed the processed images themselves to survive between builds. So I moved the boundary: the preprocessed webp outputs and their metadata became part of the repo, committed under a generated images folder.
+
+Now the build asked a simpler question: do I already have a processed version of this image? If yes, skip Sharp entirely and copy the cached output. If no, process it and add it to the cache.
+
+## Detecting Real Changes
+
+Treating every modified file as a cache miss would defeat the point. I needed a stable hash that captured what actually mattered to the output: the source path and the file size.
+
+Modified time was the first thing to throw out. Git changes mtime on checkout, on rebase, on every operation that touches a file&apos;s index entry. A cache keyed on mtime invalidates every time anyone pulls. An early version of the cache made that mistake; the fix was to ignore mtime entirely and treat path plus size as the identifying fields.
+
+Two files with the same path and size produce the same processed result, so the same hash. The rare collision risk, two genuinely different images at the same path with the same byte length, was acceptable because a wrong cache hit produces a wrong cached image, not a corrupt build. The recovery is to bump a version field in the hash inputs and regenerate, not to debug a crash.
+
+Hashing more inputs would have been safer in the abstract, but every additional field carries a risk of accidental invalidation. The principle was to hash exactly the inputs whose change would alter the output, and nothing else. Source contents (via size), the processing parameters, and the Sharp major version went into the hash. Everything else stayed out.
+
+## The CI Side
+
+CI sets a build environment variable. When the build sees it, the image processing step short-circuits and trusts the committed cache. New or modified images get processed in their own PR, where the cache update lands as part of the diff. Reviewers see the new webp file alongside the source.
+
+The result was a build that went from minutes of image work to near-zero on most CI runs. The only time Sharp wakes up is when an image actually changed, which is exactly when you want it to.</content:encoded><category>Build</category><category>Performance</category><category>Astro</category></item><item><title>Replacing Astro Image for a Documentation Site</title><link>https://vandre.dev/blog/replacing-astro-image-with-a-custom-wrapper/</link><guid isPermaLink="true">https://vandre.dev/blog/replacing-astro-image-with-a-custom-wrapper/</guid><description>Why I removed Astro&apos;s built-in Image component from a docs site and replaced it with a thin custom wrapper, and the lesson about when generic abstractions cost more than they save.</description><pubDate>Mon, 22 Dec 2025 00:00:00 GMT</pubDate><content:encoded>I started a docs site with Astro&apos;s `Image` component because the defaults are good and the integration with Sharp is pre-built. After a few months of running at scale, I removed it.
+
+The problems were not Astro&apos;s fault, exactly. They were the consequence of an abstraction that has to serve every kind of content site, applied to one that has very specific needs. Inferring sizes from remote images was the slowest step in the build. Tables that contained images fought the wrapper layout. Reintroducing automatic width and height to make table cells render correctly was a recurring fix. The wrapper added padding and aspect-ratio behavior that made sense for blog hero images and made no sense for a small inline diagram.
+
+## The Custom Wrapper
+
+The replacement was a thin component that took a source path, rendered an image tag, and got out of the way. For local images, dimensions came from Sharp&apos;s metadata function, called once at build time. For remote images, the component skipped the inference entirely and let the browser handle it, with explicit loading, decoding, and fetch priority attributes set so above-the-fold images still loaded fast.
+
+The whole thing was smaller than the configuration block I had been writing for Astro Image. It covered the cases the docs actually had, and stopped covering the ones they did not.
+
+## When Generic Costs More Than Specific
+
+There is a moment with every shared abstraction where it stops paying for itself. The clue is that you start fighting it, applying overrides, working around its assumptions, importing it conditionally. Each override is the abstraction telling you it is not a fit for your case. After the third or fourth override, the cheapest move is usually to write the small specific version yourself.
+
+I am not against Astro Image. For a content site with a uniform shape, it is the right default. For a docs site with mixed content, table-embedded diagrams, remote screenshots, and dozens of inline icons, the cost of bending the abstraction was greater than the cost of replacing it.
+
+## What I Learned
+
+The strength of an abstraction is that it covers many cases at once. The weakness is that it covers them all the same way. When the variance in your content is bigger than the variance the abstraction was designed for, the right move is not to fight the abstraction. It is to admit it does not fit and write the small thing that does.</content:encoded><category>Astro</category><category>Performance</category><category>Images</category></item><item><title>Custom markdownlint Rules for Docs Conventions</title><link>https://vandre.dev/blog/custom-markdownlint-rules-for-docs/</link><guid isPermaLink="true">https://vandre.dev/blog/custom-markdownlint-rules-for-docs/</guid><description>How I encoded the docs site&apos;s actual conventions into project-specific markdownlint rules so contributors stopped having to remember them.</description><pubDate>Mon, 15 Dec 2025 00:00:00 GMT</pubDate><content:encoded>A linter is a contributor guide that runs every commit. Anything you would otherwise write down and hope contributors read is a candidate for a rule. The instinct to document is right; the instinct to stop at documentation is what makes the rule worth writing.
+
+A docs site I worked on had a set of conventions that mattered. Every page needed a slug and a title in the frontmatter. Code tabs needed a blank line above and below them. Certain old URL shapes were no longer allowed. Custom admonition components had to be formatted in a specific way. TODO markers in published content were a soft error worth catching. None of these were things off-the-shelf markdownlint cared about. They mattered to us, and to nobody else.
+
+## Rules That Encode Project Decisions
+
+I added a small set of project-specific rules to the markdownlint config. Each one captured a decision the team had already made, written in a form a CI step could enforce.
+
+The frontmatter rule failed any file missing a slug or title. The link rule blocked patterns we no longer wanted appearing, like legacy framework placeholders or old domain prefixes. The admonition rule required our custom syntax to be opened and closed in the shape the renderer expected. The codetabs rule required blank lines around the wrapper so the parser would resolve them correctly. The TODO rule flagged comments writers had left for themselves and forgotten to remove.
+
+Each rule was tiny. Together they made the things we cared about machine-checkable, which meant they stopped being things people had to remember.
+
+## The Allowlist Conversation
+
+The trickiest rule was the one that disallowed certain image paths but allowed aliased path imports. Real projects always have exceptions. The lesson was to not pretend they do not exist: the rule reads an explicit allowlist, and adding a new entry is a small PR with the path and a one-line reason. Reviewers see the exception and accept it intentionally rather than the linter being silently lax.
+
+## What I Learned
+
+A linter is not the place for clever rules. It is the place for the boring ones, the conventions that came out of decisions you have already had three times. Encoding them as rules is how you stop having that conversation a fourth time. The savings compound. Every new contributor inherits the conventions for free, and reviewers spend their attention on the things only humans can catch.</content:encoded><category>Documentation</category><category>Tooling</category><category>Linting</category></item><item><title>Building an OpenAPI Code Generation Pipeline with Kubb</title><link>https://vandre.dev/blog/openapi-codegen-pipeline-with-kubb/</link><guid isPermaLink="true">https://vandre.dev/blog/openapi-codegen-pipeline-with-kubb/</guid><description>How I automated TypeScript type and Zod schema generation from OpenAPI specs using Kubb, with scheduled CI runs and team notifications for breaking changes.</description><pubDate>Wed, 12 Nov 2025 00:00:00 GMT</pubDate><content:encoded>The dashboard I worked on consumed multiple APIs, all with OpenAPI specs that changed frequently. Keeping hand-written TypeScript types in sync was unsustainable, so I built a code generation pipeline to automate it.
+
+This is one piece of the dashboard&apos;s integration layer. The pipeline is the automation that keeps generated code in sync with upstream specs, and it sits downstream of the contract-first mocks and the type-safe API bet.
+
+## Why Kubb
+
+OpenAPI codegen splits along two axes that matter: what gets generated (types only, types plus runtime validators, or a full SDK), and how the output gets customized (none, templates, or plugins). Each axis trades flexibility against ergonomics.
+
+A types-only generator gives clean output but leaves runtime validation as a separate hand-maintained source of truth, which is exactly the synchronization problem the codegen was supposed to solve. A full-SDK generator covers everything in one pass but tends to emit code that does not feel hand-written, and code that does not feel hand-written is the first thing engineers route around when they hit an edge case.
+
+Kubb sits between them. It generates both TypeScript types and Zod schemas from the same spec in a single pass, so the runtime validator and the compile-time type are always derived from the same source. The plugin system was the second piece that mattered: it let me customize the output to match the project&apos;s naming conventions, so the generated client read like something a person could have written. When generated code feels native, nobody wants to fork it.
+
+## Preprocessing the Specs
+
+The specs needed cleanup before generation. Upstream services emitted OpenAPI documents that were technically valid but locally awkward: naming conventions varied across teams, optional and required fields drifted, and response envelopes wrapped real payloads differently from one service to another. None of this was wrong. It was the kind of variation that surfaces when each team owns its own spec generation and the consumers converge them later.
+
+I added a preprocessing step that ran upstream of Kubb and normalized the input before every run. The output stayed consistent regardless of upstream wording, which mattered downstream: snapshot diffs only flagged real contract changes, not the cosmetic ones that flipped on each upstream release.
+
+## The Automated Pipeline
+
+A CI workflow runs on a scheduled cadence. It fetches the latest specs, runs the preprocessing step, runs Kubb against the normalized input, type-checks the output, and diffs against the previously committed snapshot.
+
+The diff is where the pipeline earns its keep. Three categories matter: added endpoints (mostly safe, but worth flagging in case the addition signals a deprecation elsewhere), removed endpoints (load-bearing breakage, blocks the merge until consumers are updated), and changed shapes (the dangerous category, where same name and different fields is the failure mode that traditionally caught us at runtime).
+
+When the diff turns up changes, the workflow posts a structured summary to a shared channel. Engineers see the changes at the boundary where they happen, not when a build inexplicably starts failing. The summary names the endpoints, classifies each change, and links to the spec revision so the conversation about whether the change is welcome can start with full context.
+
+## What I Learned
+
+The pipeline eliminated an entire class of integration bugs. Engineers trust that the generated types match the API contract. Code reviews stopped including manual type-vs-API checks because the pipeline guarantees them.
+
+Codegen pays back only as fast as the regeneration cadence. If the spec changes weekly but regeneration runs monthly, you have bought a delayed integration bug, not a prevention. The scheduled runs were the part that made the bet worth taking. Without them, the same out-of-sync problem returns in a slower form.
+
+The deeper lesson sat one level above the pipeline. The choice of tool is downstream of the choice of source of truth. Once the OpenAPI spec is the source, every tool that respects it is acceptable; every tool that does not is unacceptable. The selection inside the acceptable bucket comes down to ergonomics. Kubb&apos;s was the best fit for this dashboard. For a different shape of project, a different tool might be.</content:encoded><category>OpenAPI</category><category>Kubb</category><category>Codegen</category><category>Integration Layer</category></item><item><title>Building Type-Safe APIs with OpenAPI</title><link>https://vandre.dev/blog/building-type-safe-apis-with-openapi/</link><guid isPermaLink="true">https://vandre.dev/blog/building-type-safe-apis-with-openapi/</guid><description>How the dashboard API integration layer became its own product: OpenAPI as the single source of truth across multiple consuming teams.</description><pubDate>Wed, 15 Oct 2025 00:00:00 GMT</pubDate><content:encoded>When multiple product teams ship into the same dashboard against the same upstream APIs, the integration layer is its own product. It has consumers, contracts, and a public surface. The decision that matters is whether to invest in that layer or let each team negotiate API consumption on its own.
+
+The dashboard I worked on had OpenAPI specs already, but nothing generated from them. Every API change meant hand-written TypeScript types needed updating, and integration bugs slipped through to production. The bet was to go all in on OpenAPI as the single source of truth: types, clients, validators, all generated from the spec. The frontend stops defining its own API types.
+
+Three other pieces sit alongside this generation work: contract-first mocks ship the shape before the implementation, a proxy layer unifies two upstream APIs behind one type-safe surface, and a CI pipeline regenerates code and alerts the team on breaking changes. This post covers the generation decision itself.
+
+## The pipeline
+
+A codegen step runs on every spec change. It emits TypeScript types, thin client functions, and request/response validators. The first iteration used `openapi-typescript` for types, with custom templates for the rest. As the validators we needed grew more elaborate, the pipeline later moved to a tool that handles types and Zod schemas in one pass. That migration is its own story.
+
+CI hooks into the spec. When it changes upstream, the regeneration opens a PR. Reviewers see exactly what changed in the contract.
+
+## Alternatives considered
+
+The codegen bet rested on rejecting three other approaches.
+
+**Hand-written TypeScript types, per consumer.** The status quo before this work: each team maintained its own types for the endpoints it called. The synchronization problem this created, types and reality drifting silently, was the reason this work happened in the first place. The cost of leaving it alone was paid every release, not once.
+
+**The spec as documentation only.** Keep the OpenAPI spec as the agreed contract on paper, but continue to hand-write everything that consumes it. This keeps the spec from gaining teeth: drift surfaces at runtime, not at build time, and the spec stays an aspirational artifact rather than a load-bearing one. A spec without consumers downstream is a wishlist.
+
+**Generation, but only for types.** A narrower bet: generate the types and keep clients, validators, and request shapes hand-written. This is a half-step that leaves the spec out of the parts that matter most at runtime, where validation, errors, and retries actually live. It also forces the team to maintain two parallel sources of truth: the spec, and whatever the hand-written client believes.
+
+The full-pipeline bet costs more up front but pays back the moment the spec changes. Every alternative has a worst case where the spec drifts from reality. The pipeline forces them back into alignment automatically.
+
+## What changed
+
+Integration errors dropped to near zero. Code reviews stopped including manual type-vs-API checks because the pipeline guaranteed them. Refactoring API consumption code became safer; the compiler caught contract violations that previously surfaced in production.
+
+The biggest practical win was confidence. Engineers stopped guessing whether the types matched the response.
+
+## What I learned
+
+Codegen is not a silver bullet. The generated code needs to be readable, because if engineers can&apos;t understand the output, they will route around it. I spent time tuning the templates until the generated client felt hand-written.
+
+The other lesson: treat the OpenAPI spec as a first-class artifact. If the spec is wrong or incomplete, the generated code is too. Spec validation in CI fails the build before bad specs reach consumers.</content:encoded><category>OpenAPI</category><category>TypeScript</category><category>API</category><category>Integration Layer</category></item><item><title>A Practical Prefetching Strategy with TanStack Query and Router</title><link>https://vandre.dev/blog/tanstack-query-prefetching-strategy/</link><guid isPermaLink="true">https://vandre.dev/blog/tanstack-query-prefetching-strategy/</guid><description>How I implemented intent-based preloading, route-level prefetching, and pagination prefetching to make a dashboard feel instant.</description><pubDate>Fri, 29 Aug 2025 00:00:00 GMT</pubDate><content:encoded>A dashboard that feels slow loses trust. Users click a navigation link and expect the data to already be there. I built a prefetching strategy that makes a dashboard feel instant, even when the API calls take hundreds of milliseconds.
+
+The work happens in two layers: route-level prefetching in loaders, and intent-based prefetching for the rows a user is likely to click next.
+
+## Route-Level Prefetching
+
+I moved from `beforeLoad` to `loader`-based prefetching on every route. The `loader` function calls `queryClient.ensureQueryData()` with the same query options the page components use. This means the data fetching starts at navigation time, not at component mount time.
+
+The key decision was to use the same query options factory functions in both the loader and the components. I extracted these into domain-specific files so the loader and the component always agreed on cache keys and stale times. By the time the page mounted, the data was already in the cache and rendered without a fetch.
+
+I evaluated `defaultPreload: &apos;intent&apos;` for hover-based prefetching at the router level, but turned it off. With loaders already running on navigation and most lists being long, intent-preload was either redundant for the rows we were going to click or wasteful for the dozens we were not. The loader strategy gave us the same perceived speed without firing requests on every hover.
+
+## Prefetching What&apos;s Likely Next
+
+For tables, I added a row intersection observer that tracks which rows are visible. When a row enters the viewport, the observer kicks off a background `queryClient.prefetchQuery()` for that row&apos;s detail view. By the time the user clicks, the detail data is usually already cached.
+
+The observer ran with a small positive `rootMargin` so prefetches started just before the row was fully in view, which gave the network a few hundred milliseconds of head start on slow connections. The threshold stayed at the default; partial visibility was a strong enough signal. A `Set` tracked which row IDs had already been prefetched in the current session, so scrolling back and forth did not refire requests for rows already in the cache.
+
+This was a better fit than blanket page-level prefetching. Most users do not page through a table sequentially. They scan, scroll, and click on the one or two rows that catch their eye. Prefetching exactly those rows was both cheaper and more accurate than prefetching N+1 in either direction. It also degraded gracefully: if a user scrolled too fast for the observer to fire, the detail view fell back to the same loader-based fetch the rest of the app used.
+
+## What I Disabled
+
+I turned off `refetchOnWindowFocus` globally. Stale times are tuned based on how frequently each type of data changes, so a focus event is the wrong trigger; data that should refresh on focus would refresh on its own stale boundary anyway, and data that should not is exactly what users see refetching every time they switch back to the tab. Disabling it eliminated the jarring full-page refresh that users experienced when returning to the dashboard.
+
+`refetchOnReconnect` came off for the same reason. The retry strategy lives in stale times, not in event triggers.
+
+`retry` defaulted to a small fixed number for mutations and to zero for queries that returned 4xx errors. A 401 or 404 is not a transient failure; retrying it just delays the error the user needs to see.</content:encoded><category>TanStack</category><category>Performance</category><category>React</category></item><item><title>Encoding Pricing Rules Without Forking the UI</title><link>https://vandre.dev/blog/encoding-pricing-rules-as-data/</link><guid isPermaLink="true">https://vandre.dev/blog/encoding-pricing-rules-as-data/</guid><description>How I moved pricing math out of components and into the plan definition so a marketing site could absorb new products and billing models without UI changes.</description><pubDate>Tue, 15 Jul 2025 00:00:00 GMT</pubDate><content:encoded>Rules in components scale by branching. Rules in data scale by extension. Knowing which side of that line a thing belongs on is the call that keeps a pricing UI from rotting as new products land.
+
+The marketing site I worked on rendered pricing for several products, and each one priced differently. One was usage-based with multiple input dimensions and multipliers. Another was tiered by stored data, scaled by monthly active users. Another mixed time-based units with storage tiers and addons that only applied on certain plans. New products kept arriving with new billing models.
+
+The UI had already been solved in an earlier round of work: range sliders, comparison tables, plan cards, mobile-friendly grids. What kept breaking was the math behind the sliders. Every time a billing rule changed, the temptation was to add another conditional in the component. Two products in, that approach was already starting to rot.
+
+## Plans as data
+
+I moved the rules out of components and into the plan definition. Each plan declared what kind of calculation it used and what inputs it accepted. The calculation logic itself lived in shared utility functions, one per billing model. The component became generic: it read the plan, rendered the relevant inputs, and called the right utility.
+
+Adding a new billing dimension stopped being a UI change. A new tier, a new multiplier, an addon that only applied above a usage threshold: each one was a small extension to the schema and a small new utility. The components did not notice.
+
+## The legacy corner
+
+Pricing carries history. Customers on older plans need to see prices that match what they signed up under, even when the public-facing rules have moved on. The schema accommodates these as named legacy plans that map to frozen rule sets. New products launch in the main schema; legacy plans live in their own corner of it.
+
+It is not the cleanest separation, but the discipline is the same one: rules live with the plan, never with the component.
+
+## What I learned
+
+The first time you find yourself writing a slug check inside a pricing component, the schema is wrong. Pricing rules belong with the plan, not in the layer that draws the plan. Once that boundary is drawn, every new product slots into the schema without touching the UI.</content:encoded><category>Architecture</category><category>Marketing</category><category>Patterns</category></item><item><title>Mocking the API Contract Before Implementing It</title><link>https://vandre.dev/blog/mocking-api-contracts-before-implementing/</link><guid isPermaLink="true">https://vandre.dev/blog/mocking-api-contracts-before-implementing/</guid><description>How shipping the API contract before the implementation removed the synchronization tax between backend and frontend teams.</description><pubDate>Sun, 01 Jun 2025 00:00:00 GMT</pubDate><content:encoded>When backend and frontend teams build the same feature, the frontend gets stuck waiting. The API shape has been agreed on a whiteboard, but until the endpoint returns data, the UI cannot be wired against it. Frontend mocks fill the gap and then drift, and &quot;we agreed on the shape&quot; stops meaning much once the implementation lands and looks slightly different.
+
+I started shipping the contract before shipping the implementation. The endpoint exists in production, returns a realistic example payload, and serves the OpenAPI shape before any real work happens behind it.
+
+This is one piece of the dashboard&apos;s integration layer. Contract-first mocks sit at the boundary between teams, before the codegen pipeline and the proxy unification layer ever see the spec.
+
+## The contract is the decision
+
+The shape of an API is the part worth deliberating over: field names, types, optionality, the behavior of list versus single, how errors are structured. Once those decisions are made and codified, the implementation is just engineering. The implementation can change. The contract is what the frontend, the SDK consumers, the SLA, and the documentation depend on.
+
+Treating the contract as the artifact of the design phase changes the order of work. Instead of design, build, expose, it becomes design, expose, build.
+
+## Alternatives considered
+
+Shipping the contract first rested on rejecting three other patterns the team had tried.
+
+**Wait for the backend.** The default. Frontend work blocks on backend work even when the contract is agreed in principle. The synchronization tax this creates is the problem the post is trying to solve, and it does not go away by being patient about it.
+
+**Frontend-local stubs.** Every developer writes their own mock helper, scoped to whatever they need to render today. The stubs drift from each other and from reality. By the time the real endpoint lands, three frontend code paths exist for the same data, and reconciling them is its own merge.
+
+**Types-only contract.** Publish the TypeScript types from the OpenAPI spec, leave the actual endpoint for later. Types compile against, but they do not return data. Anything that needs to exercise the network (QA, integration tests, screenshots) still cannot move forward.
+
+The mocked-endpoint approach combines what each alternative was reaching for: real URL, real types, real example payloads, available in production from day one.
+
+## Realistic examples beat empty stubs
+
+A mocked endpoint that returns an empty list or a placeholder string is technically a contract, but a useless one. The frontend cannot tell whether the rendering looks right because the data does not look like real data. QA cannot test edge cases because there are no edge cases.
+
+A mocked endpoint that returns a realistic example payload is a different thing. It looks like the data you will actually get. Schema generators consume it. Documentation tools render it as a sample response. The same examples appear in the OpenAPI spec, the mock, and the docs: three places, one source of truth.
+
+## A marker for what is real
+
+The downside is that consumers cannot tell whether they are looking at a real endpoint or a stub returning canned data. A small marker on each endpoint flagged its implementation status. Mocked endpoints showed up as such in internal dashboards, and CI refused to consider any endpoint done until the marker had been removed.
+
+The marker did one boring job and did it well. It made the difference between &quot;it returns 200&quot; and &quot;it does what it says&quot; visible to the whole team.
+
+## What I learned
+
+The synchronization tax between backend and frontend teams is real but mostly self-imposed. If the contract is shipped first, even as a mock, the synchronization problem becomes scheduling. The frontend builds against the real URL. The backend implements at its own pace. The day the implementation lands, the frontend already works.</content:encoded><category>API</category><category>Architecture</category><category>DX</category><category>Integration Layer</category></item><item><title>Proxy Patterns for Multi-API Dashboards</title><link>https://vandre.dev/blog/proxy-patterns-for-multi-api-dashboards/</link><guid isPermaLink="true">https://vandre.dev/blog/proxy-patterns-for-multi-api-dashboards/</guid><description>How I designed a proxy layer to unify multiple APIs behind a single authentication and routing system in a React dashboard.</description><pubDate>Tue, 15 Apr 2025 00:00:00 GMT</pubDate><content:encoded>A dashboard that talks to two APIs has a choice: every component learns both, or one layer learns both and the rest of the code stops noticing. The first scales linearly with surface area. The second scales with the differences between the APIs, which is usually a small fixed number.
+
+The dashboard I worked on needed to consume two distinct APIs with different authentication mechanisms, different error shapes, and different data models. I built a proxy layer that unified the experience.
+
+This is one piece of the dashboard&apos;s integration layer. Proxy unification is what consumer code sees: one type-safe surface, fed by the contract-first mocks during design and the codegen pipeline once specs ship.
+
+## The Problem
+
+One API handled platform concerns: organizations, users, billing. The other handled product features. The product API was only accessible through the platform API&apos;s proxy endpoint, which added another layer of routing logic.
+
+Every component that fetched data needed to know which API to call, how to authenticate, and how to handle errors. This knowledge was duplicated everywhere.
+
+## The Solution
+
+I split the data fetching into two hook families, each with its own fetch wrapper, error handling, and type constraints. The management hooks used direct authentication. The product hooks automatically routed through the proxy endpoint and injected the required context.
+
+Both families shared a common query options builder for cache keys, stale times, and retry logic. The type signatures stayed distinct, so a management endpoint couldn&apos;t accidentally pass to a product hook. The compiler caught it.
+
+The key insight was making the product hooks automatically determine whether they should be enabled based on context. If the required context wasn&apos;t available yet, the queries disabled themselves rather than firing and failing. That eliminated a whole class of race condition bugs during navigation.
+
+## Query Options as a Shared Language
+
+I used a builder pattern for query options. Each domain had its own options file that exported functions returning `queryOptions` objects. The same options were consumed by the hooks in components and by the route loaders for prefetching.
+
+That meant one configuration drove both the loading state and the prefetch. Changing how a query was cached propagated automatically to both the component fetch and the route loader.
+
+## What I Learned
+
+The proxy layer moved complexity from every component into a single layer. The rest of the codebase stopped needing to know about routing or authentication differences; engineers picked the right hook and the type system caught the rest.</content:encoded><category>Architecture</category><category>API</category><category>Dashboard</category><category>Integration Layer</category></item><item><title>Hybrid Next.js: Static Export and SSR from One Codebase</title><link>https://vandre.dev/blog/hybrid-nextjs-static-export-and-ssr/</link><guid isPermaLink="true">https://vandre.dev/blog/hybrid-nextjs-static-export-and-ssr/</guid><description>How I shipped a Next.js marketing site that builds as a static export for one host and as a server-rendered app on Vercel, without forking the codebase.</description><pubDate>Fri, 15 Nov 2024 00:00:00 GMT</pubDate><content:encoded>A marketing site I worked on had to deploy two ways. One target wanted a fully static export, no servers, no API routes, just files. The other was Vercel, where preview deploys needed real server rendering for CMS draft mode and a few server-only handlers. The codebase had to be the same.
+
+Next.js does not love this. API routes either exist or they do not. The router resolves dynamic features at build time. If you write a feature that depends on server rendering and then run a static export, the build either fails or quietly produces something broken at runtime.
+
+## The mode switch
+
+The fix was treating the deploy target as data. An environment variable declared which mode the build was for, and the framework configuration read it. Routes that needed server rendering flagged themselves, and on a static-export build those routes were excluded entirely. On a Vercel build, they came back. No parallel branch, no separate config, just one knob.
+
+Most routes were mode-agnostic. The few that were not (preview mode, draft handlers, anything calling a server-only function) declared their dependency once at the top of the route. The build did the rest.
+
+## The Suspense cleanup
+
+Static export is intolerant of hooks that read URL state during prerender. Anything that touched search params at render time had to sit inside a Suspense boundary, otherwise the export would either error or silently strip the page. The fix was per-component: each form or widget that read search params got its own boundary around the consuming subtree, with a sensible fallback. Hoisting the boundary into a shared layout was tempting, but scoping each one kept the diff small and the intent clear.
+
+## What I learned
+
+When the same code has to ship to two targets that disagree about what runs at build time and what runs at request time, the answer is rarely a fork. It is to give every route a way to declare what it needs, and let the build resolve it. The switch covered every future route I would write. That was the part that mattered.</content:encoded><category>Next.js</category><category>Architecture</category><category>Build</category></item><item><title>Building Interactive Pricing Pages with Next.js</title><link>https://vandre.dev/blog/building-interactive-pricing-pages/</link><guid isPermaLink="true">https://vandre.dev/blog/building-interactive-pricing-pages/</guid><description>How I built dynamic pricing pages with range sliders, plan comparisons, and real-time calculators for a SaaS product website.</description><pubDate>Sat, 15 Jun 2024 00:00:00 GMT</pubDate><content:encoded>Pricing pages sit on the seam between marketing and application. The interactivity expectation comes from the application side: sliders, calculators, dynamic comparisons, live recalculation. The performance expectation comes from the marketing side: fast load, good SEO, minimal JavaScript, no jank on first paint. Whichever side you bias for, you lose on the other.
+
+I built the pricing system for a SaaS product website using Next.js. The logic underneath involved dynamic plan selection, real-time cost calculation, feature comparison tables, and responsive layouts that worked across dozens of plan configurations.
+
+## The challenge
+
+The product had multiple pricing tiers across several product lines. Each product had its own plan structure, feature comparison table, and volume-based pricing. Some plans were annual, some monthly. Some had usage calculators driven by sliders. The pricing data came from a CMS.
+
+The goal was a single, composable pricing system that could handle any product&apos;s pricing page without duplicating code.
+
+## Dynamic components
+
+I built a set of components that rendered based on CMS data: plan cards, comparison tables, volume discount sections, FAQ accordions, banners. Each section was a modular block the CMS could reorder, show, or hide per product.
+
+The range slider was the most interesting piece. Users dragged to select their expected usage, and the page recalculated pricing in real time. The slider needed custom styling, keyboard accessibility, and smooth transitions between values. Native `&lt;input type=&quot;range&quot;&gt;` renders differently in every browser, so I styled it with CSS custom properties and pseudo-elements.
+
+## Plan selection logic
+
+Each product had a different plan structure, with usage-based options that changed the price calculation. The plan button logic needed to know the current plan, the selected plan, whether the change was an upgrade or downgrade, and whether the user was authenticated.
+
+I extracted this into a set of utility functions. The UI stayed simple: one helper returned the button&apos;s attributes, a separate click handler acted on the choice. Business logic stayed testable and separate from presentation.
+
+## Comparison tables
+
+The tables needed to be responsive without horizontal scrolling on mobile. I used a grid that collapsed to a stacked format on small screens, with the plan name inline on each feature row so context did not get lost.
+
+Tooltips were CSS-only instead of a JavaScript library, to avoid bundle weight on a marketing page where performance mattered.
+
+## What I learned
+
+Pricing pages are marketing pages that behave like applications. They need the interactivity of a dashboard (calculators, dynamic rendering, state management) but the performance expectations of a landing page: fast load, good SEO, minimal JavaScript.</content:encoded><category>Next.js</category><category>Marketing</category><category>UI</category></item></channel></rss>

@@ -1,16 +1,23 @@
 <!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="How shipping the API contract before the implementation removed the synchronization tax between backend and frontend teams."><meta name="theme-color" content="#000000"><meta name="color-scheme" content="dark"><meta name="format-detection" content="telephone=no"><meta name="robots" content="index, follow"><!-- Favicons & manifest. withBase prefixes the configured Astro base
      (e.g. /portfolio/ on the staging deploy) — hardcoded `/` would 404
      when served from a subpath. --><link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png"><link rel="apple-touch-icon" sizes="64x64" href="/favicon-64.png"><link rel="manifest" href="/manifest.json"><!-- SEO --><link rel="canonical" href="https://vandre.dev/blog/mocking-api-contracts-before-implementing/"><link rel="alternate" type="application/rss+xml" title="Vandré Leal Cândido — Writing" href="https://vandre.dev/rss.xml"><meta property="og:site_name" content="Vandré Leal Cândido"><meta property="og:locale" content="en_US"><meta property="og:title" content="Mocking the API Contract Before Implementing It · Writing · Vandré Leal Cândido"><meta property="og:description" content="How shipping the API contract before the implementation removed the synchronization tax between backend and frontend teams."><meta property="og:url" content="https://vandre.dev/blog/mocking-api-contracts-before-implementing/"><meta property="og:type" content="article"><meta property="og:image" content="https://vandre.dev/og/mocking-api-contracts-before-implementing.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Vandré Leal Cândido — Fullstack Engineer"><meta property="article:published_time" content="2025-06-01T00:00:00.000Z"><meta property="article:author" content="Vandré Leal Cândido"><meta property="article:section" content="Engineering"><meta property="article:tag" content="API"><meta property="article:tag" content="Architecture"><meta property="article:tag" content="DX"><meta property="article:tag" content="Integration Layer"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:creator" content="@vandreleal"><meta name="twitter:title" content="Mocking the API Contract Before Implementing It · Writing · Vandré Leal Cândido"><meta name="twitter:image" content="https://vandre.dev/og/mocking-api-contracts-before-implementing.png"><meta name="twitter:description" content="How shipping the API contract before the implementation removed the synchronization tax between backend and frontend teams."><!--
-  Defense-in-depth CSP. Real enforcement (incl. frame-ancestors, HSTS,
-  X-Frame-Options, X-Content-Type-Options) is set as response headers via
-  public/_headers, which Cloudflare Pages / Netlify-class CDNs honor. This
-  meta tag is a second line of defense for the directives that DO work via
-  <meta>:
+  Hand-written CSP. Astro 6's `security.csp` would replace 'unsafe-inline'
+  with per-script SHA hashes, but it's gated on a ClientRouter migration
+  and an inline-style-attribute refactor; see docs/adr/0005 for the full
+  reasoning and the config sketch ready to ship when those land.
+
+  Header-only directives (frame-ancestors, HSTS, X-Frame-Options,
+  X-Content-Type-Options, Permissions-Policy) ship via public/_headers,
+  which Cloudflare Pages / Netlify honor but GitHub Pages — the current
+  deploy target — ignores; see the comment at the top of that file.
+
+  Active directives via <meta>:
     - default-src 'self'                    → same-origin everything by default
     - script-src 'self' 'unsafe-inline'     → Astro inlines hashed module
                 'wasm-unsafe-eval'            bootstrap scripts; wasm-unsafe-eval
                                               lets Pagefind instantiate its wasm
-    - style-src 'self' 'unsafe-inline'      → build.inlineStylesheets: 'always'
+    - style-src 'self' 'unsafe-inline'      → build.inlineStylesheets: 'always' +
+                                              per-instance `style="..."` attrs
     - font-src 'self'                       → fonts ship via @fontsource (same-origin)
     - img-src 'self' data:                  → astro:assets inline data: + own /og
     - connect-src 'self'                    → no third-party telemetry (pagefind
@@ -69,7 +76,7 @@ You can also find me on <a href="https://github.com/vandreleal" target="_blank" 
        a new tab. Insert a visually-hidden cue. Skipped when an
        explicit `label` prop is set (callers can include the hint there). --> <span class="sr-only">(opens in new tab)</span> </a>.
 </p> <div class="grid-band mt-8 flex flex-col gap-2 py-3 sm:mt-12 sm:py-4"> <p class="font-mono text-xs text-neutral-400">&copy; 2026 Vandré Leal Cândido</p> <p class="font-mono text-xs text-neutral-400">
-Built with Astro &amp; Tailwind · <a href="/system" class="link-muted">/system</a> ·
+Built with Astro · <a href="/system" class="link-muted">/system</a> ·
 <a href="/music" class="link-muted">/music</a> </p> </div>  </footer> <!-- Ghosted name --> <div class="pointer-events-none absolute right-0 bottom-0 left-0 -z-10 flex items-start justify-center overflow-hidden" aria-hidden="true"> <p class="ghosted-name text-ghosted text-center leading-none font-black tracking-tight text-white/3 select-none">
 vandre
 </p> </div> <!-- Single consolidated module so the page only ships one

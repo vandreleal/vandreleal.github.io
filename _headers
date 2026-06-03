@@ -1,3 +1,10 @@
+# NOTE: GitHub Pages does NOT honor this file. It exists for the day this
+# site moves behind Cloudflare Pages, Netlify, or any CDN that reads
+# _headers (or as a contract reference for whichever proxy is set up). The
+# only security headers currently in effect are the `<meta>` directives in
+# src/layouts/HeadMeta.astro — which is everything `<meta>` CSP supports
+# (i.e. NOT frame-ancestors, HSTS, X-Frame-Options, Permissions-Policy).
+
 /*
   X-Content-Type-Options: nosniff
   X-Frame-Options: DENY

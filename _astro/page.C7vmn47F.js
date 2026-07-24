@@ -1,0 +1,1 @@
+import{t as e}from"./prefetch.DnuO_pya.js";e();

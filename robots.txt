@@ -1,8 +1,36 @@
-# AI training crawlers - opted out. Agent-of-user fetches
-# (ChatGPT-User, PerplexityBot, OAI-SearchBot) remain allowed.
+# Crawler policy, split by whether the operator runs a product that cites
+# this site back to a reader.
+#
+# Allowed: search and answer engines, user-agent fetches made because a
+# person asked for this URL, and the training crawlers of the companies whose
+# assistants people actually read (OpenAI, Anthropic, Google). Named
+# explicitly rather than left to the wildcard group so the intent is legible.
+#
+# Disallowed: bulk dataset scrapers with no reader-facing product on the
+# other end.
+#
+# A plain-text index of the whole site lives at /llms.txt.
+
+User-agent: Googlebot
+User-agent: Bingbot
+User-agent: Applebot
 User-agent: GPTBot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
 User-agent: ClaudeBot
+User-agent: Claude-SearchBot
+User-agent: Claude-User
 User-agent: Google-Extended
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: DuckAssistBot
+User-agent: Amazonbot
+User-agent: MistralAI-User
+User-agent: YouBot
+User-agent: meta-externalfetcher
+Allow: /
+
+# Bulk corpus collection - opted out.
 User-agent: CCBot
 User-agent: anthropic-ai
 User-agent: Bytespider

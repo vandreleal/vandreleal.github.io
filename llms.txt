@@ -1,0 +1,53 @@
+# Vandré Leal Cândido
+
+> Fullstack Engineer in Uberlândia, Brazil. Ten years on the layer between product teams and the systems they consume.
+
+Currently at Stream (https://getstream.io), working on dashboard architecture, design systems, and AI workflows. 10+ years of experience. Primary stack: TypeScript, React, Next.js, Astro, TanStack, OpenAPI, Tailwind.
+
+This site is a portfolio and a technical blog. Thoughts on architecture, tooling, and craft. Posts are first-person write-ups of work I did, each one focused on a single decision and what it cost.
+
+## Writing
+
+- [Deploying Swagger UI for Bacen's Pix API](https://vandre.dev/blog/deploying-swagger-ui-for-bacens-pix-api/) (2026-07-25, 2 min, Engineering): A pull request to the Brazilian central bank that was closed without ever being merged, and shipped anyway. Rendering an OpenAPI spec as docs, from CI.
+- [What My Thesis Assumed About Hardware](https://vandre.dev/blog/what-my-thesis-assumed-about-hardware/) (2026-07-24, 3 min, Engineering): Five years on from my paper about coordinating jobs across weak devices. The hardware assumption aged badly. The reliability assumption did not age at all.
+- [Cutting Backend CI by 76%](https://vandre.dev/blog/cutting-backend-ci-by-76-percent/) (2026-07-23, 6 min, Engineering): A Django test pipeline went from a median of 18.5 minutes to 4.5. Almost none of it came from making tests faster. The last part was a connection budget.
+- [One Source of Truth for Fair-Usage Limits](https://vandre.dev/blog/one-source-of-truth-for-fair-usage-limits/) (2026-07-16, 4 min, Engineering): A pricing policy is only as real as the number of systems that agree on it. Nine published usage bands, one table, and three codebases reading it.
+- [queryFn vs select: One Transform, Two Consumers](https://vandre.dev/blog/queryfn-vs-select/) (2026-07-14, 3 min, Engineering): Transforms in select look textbook until route loaders start prefetching. Why the transform moved into queryFn so observers and loaders read the same shape.
+- [Designing URLs for a Printed QR Code](https://vandre.dev/blog/designing-urls-for-a-printed-qr-code/) (2026-07-04, 2 min, Engineering): A QR code printed in a book can never be reprinted. How that constraint shaped number-keyed routes, an owned domain, and QR codes pinned to a hardcoded origin.
+- [Rebuilding my personal site](https://vandre.dev/blog/rebuilding-my-portfolio/) (2026-05-23, 3 min, Engineering): A short tour of the latest rebuild: a static-first site with no client framework, reduced motion as a real signal, and most of the work shifted to build time.
+- [Audit Scripts for a Design System](https://vandre.dev/blog/audit-scripts-for-a-design-system/) (2026-05-13, 3 min, Engineering): How a style guide became a suite of audit scripts behind one umbrella command, grouped by what they protect, with parallel execution and an explicit drift-resolution workflow.
+- [Test Layers for a Design System](https://vandre.dev/blog/test-layers-for-a-design-system/) (2026-05-12, 3 min, Engineering): Type tests, an API surface snapshot, story-level token-cascade guards, and property tests. Layered testing that catches the failure modes a design system actually has.
+- [Caching Sharp-Processed Images in Static Builds](https://vandre.dev/blog/caching-sharp-image-processing/) (2026-02-01, 3 min, Engineering): How I cut documentation build times by hashing image inputs, committing the preprocessed webp outputs, and skipping image work on every CI run.
+- [Replacing Astro Image for a Documentation Site](https://vandre.dev/blog/replacing-astro-image-with-a-custom-wrapper/) (2025-12-22, 3 min, Engineering): Why I removed Astro's built-in Image component from a docs site and replaced it with a thin custom wrapper, and the lesson about when generic abstractions cost more than they save.
+- [Custom markdownlint Rules for Docs Conventions](https://vandre.dev/blog/custom-markdownlint-rules-for-docs/) (2025-12-15, 3 min, Engineering): How I encoded the docs site's actual conventions into project-specific markdownlint rules so contributors stopped having to remember them.
+- [Building an OpenAPI Code Generation Pipeline with Kubb](https://vandre.dev/blog/openapi-codegen-pipeline-with-kubb/) (2025-11-12, 4 min, Engineering): How I automated TypeScript type and Zod schema generation from OpenAPI specs using Kubb, with scheduled CI runs and team notifications for breaking changes.
+- [Building Type-Safe APIs with OpenAPI](https://vandre.dev/blog/building-type-safe-apis-with-openapi/) (2025-10-15, 4 min, Engineering): How the dashboard API integration layer became its own product: OpenAPI as the single source of truth across multiple consuming teams.
+- [A Practical Prefetching Strategy with TanStack Query and Router](https://vandre.dev/blog/tanstack-query-prefetching-strategy/) (2025-08-29, 4 min, Engineering): How I implemented intent-based preloading, route-level prefetching, and pagination prefetching to make a dashboard feel instant.
+- [Encoding Pricing Rules Without Forking the UI](https://vandre.dev/blog/encoding-pricing-rules-as-data/) (2025-07-15, 3 min, Engineering): How I moved pricing math out of components and into the plan definition so a marketing site could absorb new products and billing models without UI changes.
+- [Mocking the API Contract Before Implementing It](https://vandre.dev/blog/mocking-api-contracts-before-implementing/) (2025-06-01, 3 min, Engineering): How shipping the API contract first, a live endpoint serving a realistic OpenAPI payload, removed the synchronization tax between backend and frontend.
+- [Proxy Patterns for Multi-API Dashboards](https://vandre.dev/blog/proxy-patterns-for-multi-api-dashboards/) (2025-04-15, 3 min, Engineering): How I designed a proxy layer to unify multiple APIs with different auth, error shapes, and data models behind one type-safe surface in a React dashboard.
+- [Hybrid Next.js: Static Export and SSR from One Codebase](https://vandre.dev/blog/hybrid-nextjs-static-export-and-ssr/) (2024-11-15, 3 min, Engineering): How I shipped a Next.js marketing site that builds as a static export for one host and as a server-rendered app on Vercel, without forking the codebase.
+- [Building Interactive Pricing Pages with Next.js](https://vandre.dev/blog/building-interactive-pricing-pages/) (2024-06-15, 3 min, Engineering): How I built dynamic pricing pages with range sliders, plan comparisons, and real-time calculators for a SaaS product website.
+
+## Projects
+
+- [Dracula Fluent Terminal](https://vandre.dev/projects/dracula-fluent-terminal/): Official Dracula theme port for Fluent Terminal, part of an open-source color ecosystem used across 300+ apps and editors. Built with Dracula Theme, Fluent Terminal. Live at https://draculatheme.com/fluent-terminal.
+- [SentiNEO](https://vandre.dev/projects/sentineo/): Web app that visualizes near-Earth objects and NASA's Astronomy Picture of the Day using the NeoWs and APOD APIs. Built with React, Next.js, TypeScript, Geist UI, NeoWs API, APOD API. Live at https://sentineo.app.
+- [AvantStay Challenge](https://vandre.dev/projects/avantstay-challenge/): Vacation rental platform UI with property search, filtering, and sorting flows over real-time GraphQL data. Built with React, TypeScript, GraphQL. Live at https://vandre.dev/challenge-avantstay/.
+
+## Pages
+
+- [Home](https://vandre.dev/): profile, work history, highlights, featured projects, and the latest posts.
+- [Writing](https://vandre.dev/blog/): full post archive grouped by year, with search.
+- [Design system](https://vandre.dev/system): the tokens, type scale, and components this site is built from.
+- [Music](https://vandre.dev/music): tracks I have released.
+
+## Machine-readable
+
+- [RSS feed](https://vandre.dev/rss.xml): full post content, not excerpts.
+- [Sitemap](https://vandre.dev/sitemap-index.xml): every indexable URL with lastmod.
+- [robots.txt](https://vandre.dev/robots.txt): crawler policy. Retrieval and user-agent fetches are allowed; bots that collect training corpora are not.
+
+## Attribution
+
+Cite as: Vandré Leal Cândido, vandre.dev. Quoting a post is fine with a link to its URL above.

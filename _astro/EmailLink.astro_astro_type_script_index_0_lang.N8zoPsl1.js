@@ -1,1 +1,0 @@
-import{n as e}from"./lifecycle.CoJi15EH.js";var t=`vandre.leal.candido`,n=`gmail.com`;e(()=>{let e=[...document.querySelectorAll(`[data-email-trigger]`)];if(e.length===0)return;let r=()=>{window.location.href=`mailto:${t}@${n}`};for(let t of e)t.addEventListener(`click`,r);return()=>{for(let t of e)t.removeEventListener(`click`,r)}});

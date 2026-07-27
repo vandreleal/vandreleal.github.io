@@ -1,1 +1,0 @@
-import{i as e,n as t,r as n}from"./lifecycle.CoJi15EH.js";t(()=>{if(!n())return;let t=document.querySelector(`.scroll-progress`);if(t)return e(()=>{let e=document.documentElement.scrollHeight-window.innerHeight,n=e>0?Math.min(1,Math.max(0,window.scrollY/e)):0;t.style.setProperty(`--scroll-progress`,String(n))})});

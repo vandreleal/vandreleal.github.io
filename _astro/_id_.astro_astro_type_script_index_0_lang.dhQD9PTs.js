@@ -1,0 +1,1 @@
+import{n as e,r as t}from"./lifecycle.DVrJbXVS.js";var n=e()?document.querySelector(`.scroll-progress`):null;n&&t(()=>{let e=document.documentElement.scrollHeight-window.innerHeight,t=e>0?Math.min(1,Math.max(0,window.scrollY/e)):0;n.style.setProperty(`--scroll-progress`,String(t))});

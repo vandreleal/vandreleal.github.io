@@ -40,7 +40,7 @@ This site is a portfolio and a technical blog. Thoughts on architecture, tooling
 - [Home](https://vandre.dev/): profile, work history, highlights, featured projects, and the latest posts.
 - [Writing](https://vandre.dev/blog/): full post archive grouped by year, with search.
 - [Design system](https://vandre.dev/system/): the tokens, type scale, and components this site is built from.
-- [Music](https://vandre.dev/music/): tracks I have released.
+- [Music](https://vandre.dev/music/): a listening catalogue, not a discography. Tracks on rotation, mix albums, deep-work picks, all-time songs, and Brazilian standards.
 
 ## Machine-readable
 

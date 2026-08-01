@@ -8,6 +8,7 @@ This site is a portfolio and a technical blog. Thoughts on architecture, tooling
 
 ## Writing
 
+- [Rebuilding SentiNEO as a Desktop](https://vandre.dev/blog/rebuilding-sentineo-as-a-desktop/) (2026-08-01, 3 min, Engineering): Why I rebuilt an asteroid tracker from a scrolling list into a desktop of draggable windows, and why the phone version had to be a different interface.
 - [Deploying Swagger UI for Bacen's Pix API](https://vandre.dev/blog/deploying-swagger-ui-for-bacens-pix-api/) (2026-07-25, 2 min, Engineering): A pull request to the Brazilian central bank that was closed without ever being merged, and shipped anyway. Rendering an OpenAPI spec as docs, from CI.
 - [What My Thesis Assumed About Hardware](https://vandre.dev/blog/what-my-thesis-assumed-about-hardware/) (2026-07-24, 3 min, Engineering): Five years on from my paper about coordinating jobs across weak devices. The hardware assumption aged badly. The reliability assumption did not age at all.
 - [Cutting Backend CI by 76%](https://vandre.dev/blog/cutting-backend-ci-by-76-percent/) (2026-07-23, 6 min, Engineering): A Django test pipeline went from a median of 18.5 minutes to 4.5. Almost none of it came from making tests faster. The last part was a connection budget.
@@ -31,9 +32,9 @@ This site is a portfolio and a technical blog. Thoughts on architecture, tooling
 
 ## Projects
 
-- [Dracula Fluent Terminal](https://vandre.dev/projects/dracula-fluent-terminal/): Official Dracula theme port for Fluent Terminal, part of an open-source color ecosystem used across 300+ apps and editors. Built with Dracula Theme, Fluent Terminal. Live at https://draculatheme.com/fluent-terminal.
-- [SentiNEO](https://vandre.dev/projects/sentineo/): Web app that visualizes near-Earth objects and NASA's Astronomy Picture of the Day using the NeoWs and APOD APIs. Built with React, Next.js, TypeScript, Geist UI, NeoWs API, APOD API. Live at https://sentineo.app.
+- [SentiNEO](https://vandre.dev/projects/sentineo/): Desktop-style tracker for NASA's near-Earth object feed and Astronomy Picture of the Day. A full rewrite on TanStack Start, React 19 and Tailwind v4, deployed as a Cloudflare Worker. Built with TanStack Start, React 19, TypeScript, Tailwind v4, three.js, Cloudflare Workers. Live at https://sentineo.app.
 - [AvantStay Challenge](https://vandre.dev/projects/avantstay-challenge/): Vacation rental platform UI with property search, filtering, and sorting flows over real-time GraphQL data. Built with React, TypeScript, GraphQL. Live at https://vandre.dev/challenge-avantstay/.
+- [Dracula Fluent Terminal](https://vandre.dev/projects/dracula-fluent-terminal/): Official Dracula theme port for Fluent Terminal, part of an open-source color ecosystem used across 300+ apps and editors. Built with Dracula Theme, Fluent Terminal. Live at https://draculatheme.com/fluent-terminal.
 
 ## Pages
 

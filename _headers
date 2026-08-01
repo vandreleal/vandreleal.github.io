@@ -1,18 +1,26 @@
 # NOTE: GitHub Pages does NOT honor this file. It exists for the day this
-# site moves behind Cloudflare Pages, Netlify, or any CDN that reads
-# _headers (or as a contract reference for whichever proxy is set up). The
-# only security headers currently in effect are the `<meta>` directives in
-# src/layouts/HeadMeta.astro — which is everything `<meta>` CSP supports
-# (i.e. NOT frame-ancestors, HSTS, X-Frame-Options, Permissions-Policy).
+# site moves behind Cloudflare Pages, Netlify, or any CDN that reads _headers
+# (or as a contract reference for whichever proxy is set up).
+#
+# The CSP actually in effect is generated per page by Astro's `security.csp`
+# (see astro.config.mjs) and injected as a <meta http-equiv>, with per-script
+# SHA-256 hashes rather than 'unsafe-inline'. Those hashes are per page, so this
+# file cannot reproduce them — the policy below is deliberately the weaker,
+# static equivalent, and a proxy serving it would be *loosening* script-src
+# relative to the meta. If this file ever becomes live, drop script-src and
+# style-src from it and let the meta own them; a header and a meta intersect, so
+# the meta's hashes keep applying.
+#
+# What only a header can do, and what this file is really for:
+# frame-ancestors, HSTS, X-Frame-Options, Permissions-Policy. See ADR 0008.
 
 /*
   X-Content-Type-Options: nosniff
   X-Frame-Options: DENY
-  X-XSS-Protection: 1; mode=block
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=()
   Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
-  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' 'wasm-unsafe-eval'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'
+  Content-Security-Policy: default-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self'
 
 /_astro/*
   Cache-Control: public, max-age=31536000, immutable

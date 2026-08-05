@@ -33,6 +33,7 @@ This site is a portfolio and a technical blog. Thoughts on architecture, tooling
 ## Projects
 
 - [SentiNEO](https://vandre.dev/projects/sentineo/): Desktop-style tracker for NASA's near-Earth object feed and Astronomy Picture of the Day. A full rewrite on TanStack Start, React 19 and Tailwind v4, deployed as a Cloudflare Worker. Built with TanStack Start, React 19, TypeScript, Tailwind v4, three.js, Cloudflare Workers. Live at https://sentineo.app.
+- [Stay Guide](https://vandre.dev/projects/stay-guide/): Mobile-first welcome guide for short-stay guests, in Portuguese, English and Spanish. Static Astro with no client framework, fifteen sections served by one route file, and a content layer where a fact is written once. Built with Astro 7, TypeScript, Tailwind v4, Zod, YAML, GitHub Pages. Live at https://vandre.dev/stay/en/amsterdam/.
 - [AvantStay Challenge](https://vandre.dev/projects/avantstay-challenge/): Vacation rental platform UI with property search, filtering, and sorting flows over real-time GraphQL data. Built with React, TypeScript, GraphQL. Live at https://vandre.dev/challenge-avantstay/.
 - [Dracula Fluent Terminal](https://vandre.dev/projects/dracula-fluent-terminal/): Official Dracula theme port for Fluent Terminal, part of an open-source color ecosystem used across 300+ apps and editors. Built with Dracula Theme, Fluent Terminal. Live at https://draculatheme.com/fluent-terminal.
 

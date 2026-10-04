@@ -1,18 +1,5 @@
-# NOTE: GitHub Pages does NOT honor this file. It exists for the day this
-# site moves behind Cloudflare Pages, Netlify, or any CDN that reads _headers
-# (or as a contract reference for whichever proxy is set up).
-#
-# The CSP actually in effect is generated per page by Astro's `security.csp`
-# (see astro.config.mjs) and injected as a <meta http-equiv>, with per-script
-# SHA-256 hashes rather than 'unsafe-inline'. Those hashes are per page, so this
-# file cannot reproduce them — the policy below is deliberately the weaker,
-# static equivalent, and a proxy serving it would be *loosening* script-src
-# relative to the meta. If this file ever becomes live, drop script-src and
-# style-src from it and let the meta own them; a header and a meta intersect, so
-# the meta's hashes keep applying.
-#
-# What only a header can do, and what this file is really for:
-# frame-ancestors, HSTS, X-Frame-Options, Permissions-Policy. See ADR 0008.
+# Not served by GitHub Pages. Header-only directives; the per-page CSP <meta> owns
+# script-src and style-src.
 
 /*
   X-Content-Type-Options: nosniff
